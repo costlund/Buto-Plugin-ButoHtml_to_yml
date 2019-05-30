@@ -3,6 +3,20 @@
 This is a page plugin to parse HTML to YML in Buto element format. It´s for development purpose in Buto.
 Insert HTML in a textarea and the YML result appears in another textarea.
 
+## Settings
+
+```
+plugin_modules:
+  html_to_yml:
+    plugin: 'buto/html_to_yml'
+```
+
+## Url
+
+```
+/html_to_yml/form
+```
+
 ## Example
 
 HTML to parse to YML.
