@@ -1,0 +1,22 @@
+-
+  type: form
+  attribute:
+    method: post
+    target: html
+    action: parse
+  innerHTML:
+    -
+      type: textarea
+      attribute:
+        name: html
+        style: 'width:100%;height:300px'
+      innerHTML:
+    -
+      type: input
+      attribute:
+        type: submit
+-
+  type: iframe
+  attribute:
+    style: 'width:100%;height:300px'
+    name: html
