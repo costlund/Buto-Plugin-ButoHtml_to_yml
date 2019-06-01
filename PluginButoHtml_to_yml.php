@@ -73,7 +73,7 @@ class PluginButoHtml_to_yml{
       }
       $this->array->set(''.$path.'/'.$i, $item->get());
       if(!strlen((string)$child)){
-        $this->parse($child, $path.'/'.$i.'/innerHTML');
+        $this->parse((object)$child, $path.'/'.$i.'/innerHTML');
       }
     }
     return null;

@@ -61,3 +61,38 @@ All elements must have end tags. Even if they don´t need it for HTML dom purpos
 <img src=""> -> <img src=""/>
 ```
 
+### Mixed tags with text
+
+Mix tags with text will end up in incorrect result.
+
+```
+<div>Hello <strong>World</strong></div>
+```
+
+Result.
+
+```
+-
+  type: div
+  innerHTML: 'Hello '
+```
+
+Do like this.
+
+```
+<div><span>Hello</span><strong>World</strong></div>
+```
+
+Result.
+
+```
+-
+  type: div
+  innerHTML:
+    -
+      type: span
+      innerHTML: Hello
+    -
+      type: strong
+      innerHTML: World
+```
