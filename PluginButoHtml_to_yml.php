@@ -44,8 +44,8 @@ class PluginButoHtml_to_yml{
     }
     $html_string = preg_replace( "/\r|\n/", "", $html_string );
     for($i=0; $i<1000; $i++){
-      $html_string = str_replace("\n", '', $html_string);
-      $html_string = str_replace('> ', '>', $html_string);
+      $html_string = wfPhpfunc::str_replace("\n", '', $html_string);
+      $html_string = wfPhpfunc::str_replace('> ', '>', $html_string);
     }
     $html_string = '<data>'.$html_string.'</data>';
     $this->array = new PluginWfArray();
@@ -68,11 +68,11 @@ class PluginButoHtml_to_yml{
       if(sizeof($attr)){
         $item->set('attribute', $attr);
       }
-      if(strlen((string)$child)){
+      if(wfPhpfunc::strlen((string)$child)){
         $item->set('innerHTML', (string)$child);
       }
       $this->array->set(''.$path.'/'.$i, $item->get());
-      if(!strlen((string)$child)){
+      if(!wfPhpfunc::strlen((string)$child)){
         $this->parse((object)$child, $path.'/'.$i.'/innerHTML');
       }
     }
