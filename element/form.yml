@@ -3,7 +3,7 @@
   attribute:
     method: post
     target: html
-    action: parse
+    action: /html_to_yml/parse
   innerHTML:
     -
       type: textarea
